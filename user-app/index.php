@@ -66,7 +66,7 @@
             <h2>Tracking Realtime</h2>
             <p>Welcome to taxify app, the smartest way to book a cab! long waits and
                 unpredictable fares.</p>
-            <a href="login.html" class="onboarding-next">
+            <a href="login" class="onboarding-next">
                 <i class="iconsax icon" data-icon="chevron-right"></i>
             </a>
         </div>

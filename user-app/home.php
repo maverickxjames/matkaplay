@@ -105,7 +105,7 @@
     <section>
         <div class="custom-container">
             <div class="title">
-                <h3>Top Categories</h3>
+                <h3>Top Games</h3>
             </div>
 
             <ul class="categories-list">
@@ -136,95 +136,35 @@
     <section class="section-b-space">
         <div class="custom-container">
             <div class="title">
-                <h3>Today’s Offer</h3>
+                <h3>Play Game</h3>
             </div>
 
             <div class="row gy-3">
                 <div class="col-12">
                     <div class="coupon-box">
-                        <div class="coupon-discount">20% OFF</div>
+                        <div class="coupon-discount">SRIDEVI</div>
                         <div class="coupon-details">
                             <div class="coupon-content">
                                 <a href="accept-ride-details" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="../assets/images/profile/p6.png" alt="c1">
+                                    <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035769.png" alt="c1">
                                     <div>
-                                        <h5 class="fw-normal title-color">Johnson Smith</h5>
+                                        <h5 class="fw-normal title-color">700-76-123</h5>
                                     </div>
                                 </a>
                                 <div class="rating">
-                                    <img class="img-fluid star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                    <h6>4.5</h6>
+                                    <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
+                                    <!-- <h6>4.5</h6> -->
                                 </div>
                             </div>
-                            <p>Up to 10 km from Wankover city area</p>
+                            <p style="color:red">Betting is closed for Today</p>
 
                             <ul class="content-list">
-                                <li><i class="iconsax icon" data-icon="car"></i>Mini Sedan</li>
-                                <li><i class="iconsax icon" data-icon="user-1"></i>4 Person</li>
+                                <li><i class="iconsax icon" data-icon="calendar-1"></i>Chart Info</li>
+                                <li><i class="iconsax icon" data-icon="user-1"></i>Place Bet</li>
                             </ul>
                             <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Valid till :</h6>
-                                <h6 class="content-color fw-normal">21/1/2024</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">20% OFF</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="accept-ride-details" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="../assets/images/profile/p5.png" alt="c1">
-                                    <div>
-                                        <h5 class="fw-normal title-color">mike Dowson</h5>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img class="img-fluid star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                    <h6>4.5</h6>
-                                </div>
-                            </div>
-                            <p>Up to 10 km from Wankover city area</p>
-
-                            <ul class="content-list">
-                                <li><i class="iconsax icon" data-icon="car"></i>Mini Sedan</li>
-                                <li><i class="iconsax icon" data-icon="user-1"></i>4 Person</li>
-                            </ul>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Valid till :</h6>
-                                <h6 class="content-color fw-normal">21/1/2024</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">20% OFF</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="accept-ride-details" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="../assets/images/profile/p4.png" alt="c1">
-                                    <div>
-                                        <h5 class="fw-normal title-color">Aathryn Murphy</h5>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img class="img-fluid star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                    <h6>4.5</h6>
-                                </div>
-                            </div>
-                            <p>Up to 10 km from Wankover city area</p>
-
-                            <ul class="content-list">
-                                <li><i class="iconsax icon" data-icon="car"></i>Mini Sedan</li>
-                                <li><i class="iconsax icon" data-icon="user-1"></i>4 Person</li>
-                            </ul>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Valid till :</h6>
-                                <h6 class="content-color fw-normal">21/1/2024</h6>
+                                <h6 class="content-color fw-normal">Last Bid Time Open <span style="color:blue">11:37 AM</span></h6>
+                                <h6 class="content-color fw-normal">Last Bid Time Close <span style="color:blue">11:37 AM</span></h6>
                             </div>
                         </div>
                     </div>

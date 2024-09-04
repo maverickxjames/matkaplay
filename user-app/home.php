@@ -1,8 +1,12 @@
+<?php
+include('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 
 <!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/home by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:36:56 GMT -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -102,7 +106,7 @@
     <!-- slider section end -->
 
     <!-- category section starts -->
-    <section>
+    <!-- <section>
         <div class="custom-container">
             <div class="title">
                 <h3>Top Games</h3>
@@ -129,7 +133,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> -->
     <!-- category section end -->
 
     <!-- offer section starts -->
@@ -140,35 +144,92 @@
             </div>
 
             <div class="row gy-3">
-                <div class="col-12">
-                    <div class="coupon-box">
-                        <div class="coupon-discount">SRIDEVI</div>
-                        <div class="coupon-details">
-                            <div class="coupon-content">
-                                <a href="accept-ride-details" class="coupon-name">
-                                    <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035769.png" alt="c1">
-                                    <div>
-                                        <h5 class="fw-normal title-color">700-76-123</h5>
-                                    </div>
-                                </a>
-                                <div class="rating">
-                                    <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
-                                    <!-- <h6>4.5</h6> -->
-                                </div>
-                            </div>
-                            <p style="color:red">Betting is closed for Today</p>
+                <?php
+                $query = "SELECT * FROM `gamelist`";
+                $result = mysqli_query($con, $query);
+                while ($row = mysqli_fetch_array($result)) {
+                ?>
+                    <div class="col-12">
+                        <div class="coupon-box">
+                            <div style="text-transform: uppercase;" class="coupon-discount"><?= $row['title'] ?></div>
+                            <?php
+                            if ($row['game_status'] == 'open') {
+                            ?>
+                                <div class="coupon-details">
+                                    <div class="coupon-content">
+                                        <a href="accept-ride-details" class="coupon-name">
+                                            <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035769.png" alt="c1">
 
-                            <ul class="content-list">
-                                <li><i class="iconsax icon" data-icon="calendar-1"></i>Chart Info</li>
-                                <li><i class="iconsax icon" data-icon="user-1"></i>Place Bet</li>
-                            </ul>
-                            <div class="d-flex align-items-center justify-content-between mt-3">
-                                <h6 class="content-color fw-normal">Last Bid Time Open <span style="color:blue">11:37 AM</span></h6>
-                                <h6 class="content-color fw-normal">Last Bid Time Close <span style="color:blue">11:37 AM</span></h6>
-                            </div>
+                                            <div>
+                                                <h5 class="fw-normal title-color">
+                                                    <?php
+                                                    $arr = json_decode($row['game_data'], true);
+                                                    echo $arr['result'][0] . "-" . $arr['result'][1] . "-" . $arr['result'][2];;
+                                                    ?>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div class="rating">
+                                            <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
+                                            <!-- <h6>4.5</h6> -->
+                                        </div>
+                                    </div>
+                                    <p style="color:green">Betting is open for Today</p>
+
+
+                                    <ul class="content-list">
+                                        <li><i class="iconsax icon" data-icon="calendar-1"></i>Chart Info</li>
+                                        <li><i class="iconsax icon" data-icon="user-1"></i>Place Bet</li>
+                                    </ul>
+                                    <div class="d-flex align-items-center justify-content-between mt-3">
+                                        <h6 class="content-color fw-normal">Last Bid Time Open <span style="color:blue">11:37 AM</span></h6>
+                                        <h6 class="content-color fw-normal">Last Bid Time Close <span style="color:blue">11:37 AM</span></h6>
+                                    </div>
+                                </div>
+                            <?php
+                            } else {
+                                ?>
+                                <div class="coupon-details">
+                                    <div class="coupon-content">
+                                        <a href="accept-ride-details" class="coupon-name">
+                                            <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035711.png" alt="c1">
+
+                                            <div>
+                                                <h5 class="fw-normal title-color">
+                                                    <?php
+                                                    $arr = json_decode($row['game_data'], true);
+                                                    echo $arr['result'][0] . "-" . $arr['result'][1] . "-" . $arr['result'][2];;
+                                                    ?>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div class="rating">
+                                            <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
+                                            <!-- <h6>4.5</h6> -->
+                                        </div>
+                                    </div>
+                                    <p style="color:red">Betting is Clodes for Today</p>
+
+
+                                    <ul class="content-list">
+                                        <li><i class="iconsax icon" data-icon="calendar-1"></i>Chart Info</li>
+                                        <li><i class="iconsax icon" data-icon="user-1"></i>Place Bet</li>
+                                    </ul>
+                                    <div class="d-flex align-items-center justify-content-between mt-3">
+                                        <h6 class="content-color fw-normal">Last Bid Time Open <span style="color:blue">11:37 AM</span></h6>
+                                        <h6 class="content-color fw-normal">Last Bid Time Close <span style="color:blue">11:37 AM</span></h6>
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                            ?>
+
                         </div>
                     </div>
-                </div>
+                <?php
+                }
+                ?>
+
             </div>
         </div>
     </section>
@@ -192,32 +253,32 @@
             </li>
 
             <li>
-                <a href="category">
+                <a href="wallet">
                     <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/category.svg" alt="category">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/category-fill.svg" alt="category">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="category">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/60/60484.png" alt="category">
                     </div>
-                    <span>Category</span>
+                    <span>Wallet</span>
                 </a>
             </li>
 
             <li>
-                <a href="my-rides">
+                <a href="bids">
                     <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car.svg" alt="car">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-fill.svg" alt="car">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/783/783196.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/2639/2639683.png" alt="car">
                     </div>
-                    <span>My Rides</span>
+                    <span>All Bids</span>
                 </a>
             </li>
 
             <li>
-                <a href="setting">
+                <a href="history">
                     <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/setting.svg" alt="setting">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/setting-fill.svg" alt="setting">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/1157/1157077.png" alt="setting">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/128/149/149880.png" alt="setting">
                     </div>
-                    <span>Setting</span>
+                    <span>History</span>
                 </a>
             </li>
         </ul>
@@ -250,7 +311,7 @@
                 <li>
                     <a href="my-rides" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
-                        <h3>My Ride</h3>
+                        <h3>Account Statement</h3>
                     </a>
                 </li>
                 <li>
@@ -269,26 +330,15 @@
                 <li>
                     <a href="page-listing" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
-                        <h3>Template Pages</h3>
+                        <h3>Terms & Condition</h3>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
-                        <h3> Template Elements</h3>
+                        <h3> Game Rates</h3>
                     </a>
-                </li>
-
-
-                <li>
-                    <div class="pages">
-                        <i class="iconsax sidebar-icon" data-icon="repeat"> </i>
-                        <h3>RTL</h3>
-                    </div>
-                    <div class="switch-btn">
-                        <input id="dir-switch" type="checkbox">
-                    </div>
                 </li>
 
                 <li>
@@ -335,4 +385,5 @@
 
 
 <!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/home by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:00 GMT -->
+
 </html>

@@ -354,6 +354,7 @@
 }
 
 .dark {
+  
   --theme-color: 2, 2, 3;
   --title-color: 255, 255, 255;
   --content-color: 127, 131, 132;

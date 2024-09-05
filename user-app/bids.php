@@ -1,8 +1,12 @@
+<?php
+include('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 
 <!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/finding-driver by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:12 GMT -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -38,6 +42,7 @@
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
+
 </head>
 
 <body>
@@ -59,8 +64,7 @@
     <section class="pt-3">
         <div class="custom-container">
             <div class="poster-part">
-                <p class="fw-normal text-white">The pricing and departure time that drivers give are up to them. The red
-                    highlights on these deals.</p>
+                <p class="fw-normal text-white">Success is not just about winning, it's about learning from every result—whether you win or lose, the game continues.</p>
             </div>
         </div>
     </section>
@@ -68,75 +72,101 @@
 
     <!-- finding driver list starts -->
     <section class="driver-request section-b-space">
-        <div class="custom-container">
-            <ul class="driver-list">
-                <li>
-                    <div class="driver-box outstation-driver-box">
-                        <div class="profile-head">
-                            <div class="d-flex align-items-center gap-2">
-                                <img class="img-fluid profile-img" src="../assets/images/profile/p8.png" alt="profile">
-                                <h5>Range Rover</h5>
-                            </div>
-                            <h4 class="fw-semibold success-color navbar-expand">+₹100</h4>
-                        </div>
+    <div class="custom-container">
+        <ul class="driver-list">
+            <?php
+            $query = "
+            SELECT bids.*, gamelist.title 
+            FROM bids 
+            JOIN gamelist ON bids.game_id = gamelist.id ORDER BY bids.id DESC";
+            $result = mysqli_query($con, $query);
 
-                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-1 mt-2">
-                            <h5 class="fw-normal title-color">Jonathan Higgins</h5>
-                            <div class="d-flex align-items-start gap-1">
-                                <img class="clock" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/clock-circle.svg" alt="clock">
-                                <h6 class="fw-normal lh-base content-color">16 March 2024, 09:00AM</h6>
+            if ($result && mysqli_num_rows($result) > 0) {
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $statusText = '';
+                    $statusClass = '';
+                    $buttonText = '';
+
+                    switch ($row['status']) {
+                        case 0:
+                            $statusText = '- ₹' . $row['profitAmount'];
+                            $statusClass = 'btn-warning';
+                            $buttonText = 'Pending';
+                            break;
+                        case 1:
+                            $statusText = '+ ₹' . $row['profitAmount'];
+                            $statusClass = 'btn-success';
+                            $buttonText = 'You Won';
+                            break;
+                        case 2:
+                            $statusText = '- ₹' . $row['profitAmount'];
+                            $statusClass = 'btn-danger';
+                            $buttonText = 'You Lose';
+                            break;
+                    }
+            ?>
+                    <li>
+                        <div class="driver-box outstation-driver-box">
+                            <div class="profile-head">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/10490/10490256.png" alt="profile">
+                                    <h5><?= $row['title'] ?></h5>
+                                </div>
+                                <h4 class="fw-semibold navbar-expand <?= ($row['status'] == 1) ? 'success-color' : (($row['status'] == 2) ? 'error-color' : 'secondary-color') ?>">
+                                    <?= $statusText ?>
+                                </h4>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between flex-wrap gap-1 mt-2">
+                                <h5 class="fw-normal title-color"><?= $row['remark'] ?>..</h5>
+                                <div class="d-flex align-items-start gap-1">
+                                    <img class="clock" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/clock-circle.svg" alt="clock">
+                                    <h6 class="fw-normal lh-base content-color"><?= $row['created_at'] ?></h6>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between mt-2">
+                                <div class="d-flex align-items-center gap-1">
+                                    <h5 class="fw-normal title-color">Select : <?= $row['bid_value'] ?></h5>
+                                    <span class="content-color fw-normal">(<?= $row['bid_type'] ?>)</span>
+                                </div>
+                            </div>
+
+                            <div class="grid-btn mt-2">
+                                <a href="home" class="btn <?= $statusClass ?> w-100 m-0"><?= $buttonText ?></a>
                             </div>
                         </div>
+                    </li>
+                <?php
+                }
+            } else {
+                ?>
+                <section class="pt-0 section-b-space">
+                    <div class="empty-images me-4">
+                        <img class="img-fluid empty-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/notification.svg" alt="notification">
+                    </div>
 
-                        <div class="d-flex align-items-center justify-content-between mt-2">
-                            <div class="d-flex align-items-center gap-1">
-                                <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                <h5 class="fw-normal title-color">4.8</h5>
-                                <span class="content-color fw-normal">(127)</span>
-                            </div>
-                        </div>
-
-                        <div class="grid-btn mt-2">
-                            <a href="#" data-bs-toggle="offcanvas" class="btn gray-btn w-100 m-0">Skip</a>
-                            <a href="home" class="btn theme-btn w-100 m-0">Accept</a>
+                    <div class="custom-container">
+                        <div class="empty-page-content">
+                            <h3>Nothing here !!</h3>
+                            <p>Click the "Refresh" button down below to check again for something amazing.</p>
                         </div>
                     </div>
-                </li>
-                <li>
-                    <div class="driver-box outstation-driver-box">
-                        <div class="profile-head">
-                            <div class="d-flex align-items-center gap-2">
-                                <img class="img-fluid profile-img" src="../assets/images/profile/p4.png" alt="profile">
-                                <h5>Range Rover</h5>
-                            </div>
-                            <h4 class="fw-semibold" style="color:red">-₹80</h4>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-1 mt-2">
-                            <h5 class="fw-normal title-color">Michael Tenner</h5>
-                            <div class="d-flex align-items-start gap-1">
-                                <img class="clock" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/clock-circle.svg" alt="clock">
-                                <h6 class="fw-normal lh-base content-color">16 March 2024, 09:00AM</h6>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between mt-2">
-                            <div class="d-flex align-items-center gap-1">
-                                <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                <h5 class="fw-normal title-color">4.3</h5>
-                                <span class="content-color fw-normal">(86)</span>
-                            </div>
-                        </div>
-
-                        <div class="grid-btn mt-2">
-                            <a href="#" data-bs-toggle="offcanvas" class="btn gray-btn w-100 m-0">Skip</a>
-                            <a href="home" class="btn theme-btn w-100 m-0">Accept</a>
+                    <div class="fixed-btn">
+                        <div class="custom-container">
+                            <a href="notification" class="btn theme-btn w-100">Refresh</a>
                         </div>
                     </div>
-                </li>
-            </ul>
+                </section>
+            <?php
+            }
+            ?>
 
-            <a href="bids" class="btn theme-btn w-100 mt-4">Refresh</a>
-        </div>
-    </section>
+        </ul>
+    </div>
+</section>
+
     <!-- finding driver list end -->
 
     <!-- iconsax js -->
@@ -157,4 +187,5 @@
 
 
 <!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/finding-driver by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:12 GMT -->
+
 </html>

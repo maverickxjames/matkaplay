@@ -50,14 +50,13 @@ include('db.php');
     <header id="header" class="main-header inner-page-header">
         <div class="custom-container">
             <div class="header-panel">
-                <a href="home">
-                    <i class="iconsax icon-btn" data-icon="chevron-left"> </i>
+                <a href="#offcanvasLeft" data-bs-toggle="offcanvas">
+                    <i class="iconsax icon-btn" data-icon="text-align-left"> </i>
                 </a>
-
-                <h3 class="fw-semibold title-color">All Bids</h3>
+                <h3>All Bids</h3>
             </div>
         </div>
-    </header>
+    </header> 
     <!-- header end -->
 
     <!-- note section starts -->
@@ -166,6 +165,145 @@ include('db.php');
         </ul>
     </div>
 </section>
+
+<!-- panel-space start -->
+<section class="panel-space"></section>
+    <!-- panel-space end -->
+
+    <!-- bottom navbar start -->
+    <div class="navbar-menu">
+        <ul>
+            <li>
+                <a href="home">
+                    <div class="icon">
+                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/home.svg" alt="home">
+                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/home-fill.svg" alt="home">
+                    </div>
+                    <span class="active">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="wallet">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="category">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/60/60484.png" alt="category">
+                    </div>
+                    <span>Wallet</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="setting">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="car">
+                    </div>
+                    <span>Setting</span>
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="bids">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/783/783196.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/2639/2639683.png" alt="car">
+                    </div>
+                    <span>All Bids</span>
+                </a>
+            </li>
+            
+
+            <li>
+                <a href="history">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/1157/1157077.png" alt="setting">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/128/149/149880.png" alt="setting">
+                    </div>
+                    <span>History</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- bottom navbar end -->
+
+   <!-- sidebar starts -->
+   <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+        <div class="offcanvas-header sidebar-header">
+            <div class="sidebar-logo">
+                <img class="img-fluid logo" src="../assets/images/logo/logo.png" alt="logo">
+                <img class="img-fluid logo-dark" src="../assets/images/logo/logo-dark.png" alt="logo">
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
+                <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
+                <div>
+                    <h3>Jonathan Higgins</h3>
+                    <span>Edit Account</span>
+                </div>
+            </a>
+            <ul class="link-section switch-section">
+                <li class="active">
+                    <a href="home" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="home-2"> </i>
+                        <h3>Home</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="my-rides" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="car"> </i>
+                        <h3>Account Statement</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="bell-2"> </i>
+                        <h3>Notification</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="setting" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="user-1"> </i>
+                        <h3>Setting</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="page-listing" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
+                        <h3>Terms & Condition</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
+                        <h3> Game Rates</h3>
+                    </a>
+                </li>
+
+                <li>
+                    <div class="pages">
+                        <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
+                        <h3>Dark</h3>
+                    </div>
+                    <div class="switch-btn">
+                        <input id="dark-switch" type="checkbox">
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="bottom-sidebar">
+                <a href="login" class="pages">
+                    <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end -->
 
     <!-- finding driver list end -->
 

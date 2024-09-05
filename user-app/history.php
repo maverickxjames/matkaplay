@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:04 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:04 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,10 +55,10 @@
                 </div>
 
                 <div class="d-flex align-items-center gap-sm-3 gap-2">
-                    <a href="chatting.html">
+                    <a href="chatting">
                         <i class="iconsax icon-btn" data-icon="messages-2"> </i>
                     </a>
-                    <a href="notification.html">
+                    <a href="notification">
                         <i class="iconsax icon-btn" data-icon="bell-2"> </i>
                     </a>
                 </div>
@@ -147,14 +147,14 @@
                         <li>
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
-                                    <a href="pending-ride-details.html" class="my-ride-img">
+                                    <a href="pending-ride-details" class="my-ride-img">
                                         <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <a href="pending-ride-details.html">
+                                            <a href="pending-ride-details">
                                                 <h6 class="title-color fw-medium">ID : 12000052</h6>
                                             </a>
                                             <span class="status secondary-color fw-normal">Pending</span>
@@ -202,14 +202,14 @@
                         <li>
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
-                                    <a href="pending-ride-details.html" class="my-ride-img">
+                                    <a href="pending-ride-details" class="my-ride-img">
                                         <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <a href="pending-ride-details.html">
+                                            <a href="pending-ride-details">
                                                 <h6 class="title-color fw-medium">ID : 12000052</h6>
                                             </a>
                                             <span class="status secondary-color fw-normal">Pending</span>
@@ -262,14 +262,14 @@
                         <li>
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
-                                    <a href="complete-ride-details.html" class="my-ride-img">
+                                    <a href="complete-ride-details" class="my-ride-img">
                                         <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <a href="complete-ride-details.html">
+                                            <a href="complete-ride-details">
                                                 <h6 class="title-color fw-medium">ID : 12000052</h6>
                                             </a>
                                             <span class="status success-color fw-normal">Complete</span>
@@ -318,14 +318,14 @@
                         <li>
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
-                                    <a href="complete-ride-details.html" class="my-ride-img">
+                                    <a href="complete-ride-details" class="my-ride-img">
                                         <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <a href="complete-ride-details.html">
+                                            <a href="complete-ride-details">
                                                 <h6 class="title-color fw-medium">ID : 12000052</h6>
                                             </a>
                                             <span class="status success-color fw-normal">Complete</span>
@@ -378,14 +378,14 @@
                         <li>
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
-                                    <a href="cancel-ride-details.html" class="my-ride-img">
+                                    <a href="cancel-ride-details" class="my-ride-img">
                                         <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <a href="cancel-ride-details.html">
+                                            <a href="cancel-ride-details">
                                                 <h6 class="title-color fw-medium">ID : 12000052</h6>
                                             </a>
                                             <span class="status error-color fw-normal">Cancel</span>
@@ -445,42 +445,53 @@
     <div class="navbar-menu">
         <ul>
             <li>
-                <a href="home.html">
+                <a href="home">
                     <div class="icon">
                         <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/home.svg" alt="home">
                         <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/home-fill.svg" alt="home">
                     </div>
-                    <span>Home</span>
+                    <span class="active">Home</span>
                 </a>
             </li>
 
             <li>
-                <a href="category.html">
+                <a href="wallet">
                     <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/category.svg" alt="category">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/category-fill.svg" alt="category">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="category">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/60/60484.png" alt="category">
                     </div>
-                    <span>Category</span>
+                    <span>Wallet</span>
                 </a>
             </li>
 
-            <li class="active">
-                <a href="my-rides.html">
+            <li >
+                <a href="setting">
                     <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car.svg" alt="car">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-fill.svg" alt="car">
-                    </div>
-                    <span class="active">My Rides</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="setting.html">
-                    <div class="icon">
-                        <img class="unactive" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/setting.svg" alt="setting">
-                        <img class="active" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/setting-fill.svg" alt="setting">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="car">
                     </div>
                     <span>Setting</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="bids">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/783/783196.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/2639/2639683.png" alt="car">
+                    </div>
+                    <span>All Bids</span>
+                </a>
+            </li>
+            
+
+            <li class="active">
+                <a href="history">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/1157/1157077.png" alt="setting">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/128/149/149880.png" alt="setting">
+                    </div>
+                    <span>History</span>
                 </a>
             </li>
         </ul>
@@ -495,7 +506,7 @@
                 <img class="img-fluid logo-dark" src="../assets/images/logo/logo-dark.png" alt="logo"> </div>
         </div>
         <div class="offcanvas-body">
-            <a href="profile-setting.html" class="profile-part d-flex align-items-center gap-2">
+            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
                 <div>
                     <h3>Jonathan Higgins</h3>
@@ -504,39 +515,39 @@
             </a>
             <ul class="link-section switch-section">
                 <li class="active">
-                    <a href="home.html" class="pages">
+                    <a href="home" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="home-2"> </i>
                         <h3>Home</h3>
                     </a>
                 </li>
                 <li>
-                    <a href="my-rides.html" class="pages">
+                    <a href="my-rides" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
                         <h3>My Ride</h3>
                     </a>
                 </li>
                 <li>
-                    <a href="notification.html" class="pages">
+                    <a href="notification" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="bell-2"> </i>
                         <h3>Notification</h3>
                     </a>
                 </li>
 
                 <li>
-                    <a href="setting.html" class="pages">
+                    <a href="setting" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="user-1"> </i>
                         <h3>Setting</h3>
                     </a>
                 </li>
                 <li>
-                    <a href="page-listing.html" class="pages">
+                    <a href="page-listing" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
                         <h3>Template Pages</h3>
                     </a>
                 </li>
 
                 <li>
-                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page.html" class="pages">
+                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
                         <h3> Template Elements</h3>
                     </a>
@@ -566,7 +577,7 @@
             </ul>
 
             <div class="bottom-sidebar">
-                <a href="login.html" class="pages">
+                <a href="login" class="pages">
                     <i class="iconsax sidebar-icon" data-icon="logout-2"> </i>
                     <h3>Logout</h3>
                 </a>
@@ -592,5 +603,5 @@
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:05 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:05 GMT -->
 </html>

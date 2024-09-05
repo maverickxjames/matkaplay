@@ -1,8 +1,12 @@
+<?php
+include('db.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/rental-vehicle-details by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:14 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/finding-driver by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:12 GMT -->
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,12 +43,95 @@
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
     <style>
-        .wallet-amount{
-            font-size: 2.5rem;
-    text-align: center;
-    padding: 14px;
+        .driver-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
         }
+
+        .driver-box {
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .driver-box table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .driver-box table th {
+            background: #f9f9f9;
+            color: #292d32;
+            font-weight: 500;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .driver-box table td {
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #f9f9f9;
+        }
+
+        .driver-box table td:last-child {
+            border-bottom: none;
+        }
+
+        .driver-box table th:last-child {
+            border-bottom: none;
+        }
+
+        .driver-box table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .driver-box table tr:last-child th {
+            border-bottom: none;
+        }
+
+        .driver-box table tr td {
+            border-right: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr td:last-child {
+            border-right: none;
+        }
+
+        .driver-box table tr th {
+            border-right: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr th:last-child {
+            border-right: none;
+        }
+
+        .driver-box table tr td:first-child {
+            border-left: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr th:first-child {
+            border-left: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr td:last-child {
+            border-right: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr th:last-child {
+            border-right: 1px solid #f9f9f9;
+        }
+
+        .driver-box table tr td:first-child {
+            border-left: 1px solid;
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -52,82 +139,73 @@
     <header id="header" class="main-header inner-page-header">
         <div class="custom-container">
             <div class="header-panel">
-                <a href="#offcanvasLeft" data-bs-toggle="offcanvas">
-                    <i class="iconsax icon-btn" data-icon="text-align-left"> </i>
+                <a href="home">
+                    <i class="iconsax icon-btn" data-icon="chevron-left"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.0013 20.6695C14.8113 20.6695 14.6213 20.5995 14.4713 20.4495L7.95125 13.9295C6.89125 12.8695 6.89125 11.1295 7.95125 10.0695L14.4713 3.54953C14.7613 3.25953 15.2413 3.25953 15.5312 3.54953C15.8212 3.83953 15.8212 4.31953 15.5312 4.60953L9.01125 11.1295C8.53125 11.6095 8.53125 12.3895 9.01125 12.8695L15.5312 19.3895C15.8212 19.6795 15.8212 20.1595 15.5312 20.4495C15.3813 20.5895 15.1912 20.6695 15.0013 20.6695Z" fill="#292D32"></path>
+                        </svg>
+                    </i>
                 </a>
-                <h3>Wallet</h3>
+
+                <h3 class="fw-semibold title-color">Jodi Chart</h3>
             </div>
         </div>
-    </header> 
+    </header>
     <!-- header end -->
+
+    <!-- note section starts -->
+    <section class="pt-3">
+        <div class="custom-container">
+            <div class="poster-part">
+                <p class="fw-normal text-white">Success is not just about winning, it's about learning from every result—whether you win or lose, the game continues.</p>
+            </div>
+        </div>
+    </section>
+    <!-- note section end -->
+
+    <!-- finding driver list starts -->
     <section class="driver-request section-b-space">
         <div class="custom-container">
+            <div class="grid-btn mt-2">
+                <a href="home" class="btn btn-primary w-100 m-0">Go to Bottom</a>
+            </div>
             <ul class="driver-list">
                 <li>
                     <div class="driver-box outstation-driver-box">
-                        <div class="profile-head">
-                            <div class="d-flex align-items-center gap-2">
-                                <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/1041/1041888.png" alt="profile">
-                                <h5>Balance</h5>
-                            </div>
-                            
-                        </div>
-                        <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹100</h4>
-                        <div class="grid-btn mt-2">
-                            <a href="#" data-bs-toggle="offcanvas" class="btn gray-btn w-100 m-0">Recharge</a>
-                            <a href="home" class="btn theme-btn w-100 m-0">Withdraw</a>
-                        </div>
+                        <table>
+                            <tr>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                                <th>Sun</th>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>67</td>
+                                <td>12</td>
+                                <td>34</td>
+                                <td>56</td>
+                                <td>78</td>
+                                <td>90</td>
+                            </tr>
+                            <tr>
+                                <td>45</td>
+                                <td>67</td>
+                                <td>12</td>
+                                <td>34</td>
+                                <td>56</td>
+                                <td>78</td>
+                                <td>90</td>
+                            </tr>
+                        </table>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
-    <!-- vehicle details section starts -->
-    <section class="section-b-space">
 
-        <div class="vehicle-content">
-            <div class="content-title">
-                <h4 class="fw-semibold title-color">What's incorporated</h4>
-                <div class="d-flex align-items-center gap-1">
-                    <img class="img-fluid members" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/profile-fill.svg" alt="profile">
-                    <h5 class="fw-medium title-color">8</h5>
-                </div>
-            </div>
-            <ul class="details-list">
-                <li>
-                    <h5>9:00 am to 11:00 am</h5>
-                    <h6>As soon as the driver starts the journey</h6>
-                </li>
-                <li>
-                    <h5>2 hours included</h5>
-                    <h6>$1 minute for extra time</h6>
-                </li>
-                <li>
-                    <h5>20 km inluded</h5>
-                    <h6>$10 km for extra distance</h6>
-                </li>
-            </ul>
-
-        </div>
-        <div class="condition-part">
-            <h4 class="fw-semibold title-color">Policies & fees</h4>
-            <ul class="condition-list">
-                <li>
-                    <h5>Tolls and surcharges</h5>
-                    <p>Any additional charges will be billed after your trip is completed.</p>
-                </li>
-                <li>
-                    <h5>Non refundable fare</h5>
-                    <p>You’ll be charged the full upfront amount even if your trip is shorter than booked time or
-                        included mileage.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- vehicle details section end -->
-
-
-    
     <!-- panel-space start -->
     <section class="panel-space"></section>
     <!-- panel-space end -->
@@ -145,7 +223,7 @@
                 </a>
             </li>
 
-            <li class="active">
+            <li>
                 <a href="wallet">
                     <div class="icon">
                         <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/482/482541.png" alt="category">
@@ -165,7 +243,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="bids">
                     <div class="icon">
                         <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/783/783196.png" alt="car">
@@ -174,7 +252,7 @@
                     <span>All Bids</span>
                 </a>
             </li>
-            
+
 
             <li>
                 <a href="history">
@@ -189,8 +267,8 @@
     </div>
     <!-- bottom navbar end -->
 
-   <!-- sidebar starts -->
-   <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
+    <!-- sidebar starts -->
+    <div class="offcanvas sidebar-offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft">
         <div class="offcanvas-header sidebar-header">
             <div class="sidebar-logo">
                 <img class="img-fluid logo" src="../assets/images/logo/logo.png" alt="logo">
@@ -267,6 +345,8 @@
     </div>
     <!-- sidebar end -->
 
+    <!-- finding driver list end -->
+
     <!-- iconsax js -->
     <script src="../assets/js/iconsax.js"></script>
 
@@ -284,5 +364,6 @@
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/rental-vehicle-details by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:14 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/finding-driver by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:12 GMT -->
+
 </html>

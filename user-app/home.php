@@ -157,8 +157,8 @@ include('db.php');
                             ?>
                                 <div class="coupon-details">
                                     <div class="coupon-content">
-                                        <a href="accept-ride-details" class="coupon-name">
-                                            <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035769.png" alt="c1">
+                                        <a href="jodichart" class="coupon-name">
+                                            <img class="img-fluid coupon-img" style="border-radius:0" src="https://cdn-icons-png.flaticon.com/512/1234/1234189.png" alt="c1">
 
                                             <div>
                                                 <h5 class="fw-normal title-color">
@@ -191,8 +191,8 @@ include('db.php');
                                 ?>
                                 <div class="coupon-details">
                                     <div class="coupon-content">
-                                        <a href="accept-ride-details" class="coupon-name">
-                                            <img class="img-fluid coupon-img" src="https://cdn-icons-png.flaticon.com/512/14035/14035711.png" alt="c1">
+                                        <a href="jodichart" class="coupon-name">
+                                            <img class="img-fluid coupon-img" style="border-radius:0" src="https://cdn-icons-png.flaticon.com/512/1234/1234190.png" alt="c1">
 
                                             <div>
                                                 <h5 class="fw-normal title-color">
@@ -262,6 +262,16 @@ include('db.php');
                 </a>
             </li>
 
+            <li >
+                <a href="setting">
+                    <div class="icon">
+                        <img style="width:25px" class="unactive" src="https://cdn-icons-png.flaticon.com/512/2040/2040504.png" alt="car">
+                        <img style="width:25px" class="active" src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="car">
+                    </div>
+                    <span>Setting</span>
+                </a>
+            </li>
+
             <li>
                 <a href="bids">
                     <div class="icon">
@@ -271,6 +281,7 @@ include('db.php');
                     <span>All Bids</span>
                 </a>
             </li>
+            
 
             <li>
                 <a href="history">

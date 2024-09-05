@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:36:53 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/login by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:36:53 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -84,7 +84,7 @@
 
                 <a href="otp" class="btn theme-btn w-100 auth-btn" role="button">Get OTP</a>
                 <h6 class="content-color fw-normal mt-3 text-center"> New User ?
-                    <a href="signup.html" class="title-color fw-medium">Sign up</a> </h6>
+                    <a href="signup" class="title-color fw-medium">Sign up</a> </h6>
                 <div class="division">
                     <span>OR</span>
                 </div>
@@ -115,5 +115,5 @@
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:36:54 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/login by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:36:54 GMT -->
 </html>

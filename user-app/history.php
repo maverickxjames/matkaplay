@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:04 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/history by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:04 GMT -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -506,10 +506,10 @@
                 <img class="img-fluid logo-dark" src="../assets/images/logo/logo-dark.png" alt="logo"> </div>
         </div>
         <div class="offcanvas-body">
-            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
+            <a href="profile" class="profile-part d-flex align-items-center gap-2">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
                 <div>
-                    <h3>Jonathan Higgins</h3>
+                    <h3>Ashok Matkaplay</h3>
                     <span>Edit Account</span>
                 </div>
             </a>
@@ -521,7 +521,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="my-rides" class="pages">
+                    <a href="history" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
                         <h3>My Ride</h3>
                     </a>
@@ -547,7 +547,7 @@
                 </li>
 
                 <li>
-                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
+                    <a href="" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
                         <h3> Template Elements</h3>
                     </a>
@@ -603,5 +603,5 @@
 </body>
 
 
-<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/my-rides by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:05 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/pwa/taxify/user-app/history by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 01 Sep 2024 04:37:05 GMT -->
 </html>

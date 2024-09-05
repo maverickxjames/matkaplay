@@ -83,7 +83,7 @@
                     </div>
 
                     <div class="msg-bubble">
-                        <div class="msg-text">Hi, welcome to taxify</div>
+                        <div class="msg-text">Hi, welcome to matkaplay</div>
                     </div>
                 </div>
 

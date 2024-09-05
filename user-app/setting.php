@@ -63,14 +63,14 @@
             <div class="profile-image">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
             </div>
-            <h3 class="profile-name">Jonathan Higgins</h3>
+            <h3 class="profile-name">Ashok Matkaplay</h3>
             <h6 class="fw-normal content-color mt-1 text-center">jonathanhiggins001@gmail.com</h6>
         </div>
 
-        <div class="wallet-part">
+        <div onclick="window.location.href='wallet'" class="wallet-part">
             <h6>My Wallet Balance</h6>
             <div class="d-flex align-content-center justify-content-center gap-1">
-                <h5>$1,56.23 </h5>
+                <h5>₹100000.00 </h5>
                 <img class="img-fluid arrow-img" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/side-arrow.svg" alt="side-arrow">
             </div>
         </div>
@@ -81,7 +81,7 @@
                 <h5 class="fw-normal content-color mb-3">General</h5>
                 <ul class="setting-listing">
                     <li class="w-100">
-                        <a href="profile-setting" class="setting-box">
+                        <a href="profile" class="setting-box">
                             <div class="setting-icon">
                                 <i class="iconsax icon" data-icon="user-1"> </i>
                             </div>
@@ -93,36 +93,12 @@
                     </li>
 
                     <li class="w-100">
-                        <a href="saved-location" class="setting-box">
-                            <div class="setting-icon">
-                                <i class="iconsax icon" data-icon="location"> </i>
-                            </div>
-                            <div class="setting-content">
-                                <h5>Saved location </h5>
-                                <i class="iconsax icon" data-icon="chevron-right"> </i>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="w-100">
-                        <a href="bank-details" class="setting-box">
+                        <a href="bank" class="setting-box">
                             <div class="setting-icon">
                                 <i class="iconsax icon" data-icon="bank"> </i>
                             </div>
                             <div class="setting-content">
                                 <h5>Bank details</h5>
-                                <i class="iconsax icon" data-icon="chevron-right"> </i>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="w-100">
-                        <a href="coupon" class="setting-box">
-                            <div class="setting-icon">
-                                <i class="iconsax icon" data-icon="ticket-1"> </i>
-                            </div>
-                            <div class="setting-content">
-                                <h5>Promo code list</h5>
                                 <i class="iconsax icon" data-icon="chevron-right"> </i>
                             </div>
                         </a>
@@ -380,10 +356,10 @@
             </div>
         </div>
         <div class="offcanvas-body">
-            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
+            <a href="profile" class="profile-part d-flex align-items-center gap-2">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
                 <div>
-                    <h3>Jonathan Higgins</h3>
+                    <h3>Ashok Matkaplay</h3>
                     <span>Edit Account</span>
                 </div>
             </a>
@@ -395,7 +371,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="my-rides" class="pages">
+                    <a href="history" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
                         <h3>Account Statement</h3>
                     </a>
@@ -421,7 +397,7 @@
                 </li>
 
                 <li>
-                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
+                    <a href="rates" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
                         <h3> Game Rates</h3>
                     </a>

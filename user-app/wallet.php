@@ -72,7 +72,7 @@
                             </div>
                             
                         </div>
-                        <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹100</h4>
+                        <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹100000</h4>
                         <div class="grid-btn mt-2">
                             <a href="#" data-bs-toggle="offcanvas" class="btn gray-btn w-100 m-0">Recharge</a>
                             <a href="home" class="btn theme-btn w-100 m-0">Withdraw</a>
@@ -87,7 +87,7 @@
 
         <div class="vehicle-content">
             <div class="content-title">
-                <h4 class="fw-semibold title-color">What's incorporated</h4>
+                <h4 class="fw-semibold title-color">Withdrawal Notice</h4>
                 <div class="d-flex align-items-center gap-1">
                     <img class="img-fluid members" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/profile-fill.svg" alt="profile">
                     <h5 class="fw-medium title-color">8</h5>
@@ -96,15 +96,11 @@
             <ul class="details-list">
                 <li>
                     <h5>9:00 am to 11:00 am</h5>
-                    <h6>As soon as the driver starts the journey</h6>
+                    <h6>Withdraw within the time limit.</h6>
                 </li>
                 <li>
-                    <h5>2 hours included</h5>
-                    <h6>$1 minute for extra time</h6>
-                </li>
-                <li>
-                    <h5>20 km inluded</h5>
-                    <h6>$10 km for extra distance</h6>
+                    <h5>2 Withdrawal per day</h5>
+                    <h6>You can only place 2 Withdrawal in a day</h6>
                 </li>
             </ul>
 
@@ -114,12 +110,11 @@
             <ul class="condition-list">
                 <li>
                     <h5>Tolls and surcharges</h5>
-                    <p>Any additional charges will be billed after your trip is completed.</p>
+                    <p>Any additional charges will be billed after your deposit is completed.</p>
                 </li>
                 <li>
                     <h5>Non refundable fare</h5>
-                    <p>You’ll be charged the full upfront amount even if your trip is shorter than booked time or
-                        included mileage.</p>
+                    <p>You’ll be charged the full upfront amount even if your bids is against the result</p>
                 </li>
             </ul>
         </div>
@@ -198,10 +193,10 @@
             </div>
         </div>
         <div class="offcanvas-body">
-            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
+            <a href="profile" class="profile-part d-flex align-items-center gap-2">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
                 <div>
-                    <h3>Jonathan Higgins</h3>
+                    <h3>Ashok Matkaplay</h3>
                     <span>Edit Account</span>
                 </div>
             </a>
@@ -213,7 +208,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="my-rides" class="pages">
+                    <a href="history" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
                         <h3>Account Statement</h3>
                     </a>
@@ -239,7 +234,7 @@
                 </li>
 
                 <li>
-                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
+                    <a href="rates" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
                         <h3> Game Rates</h3>
                     </a>

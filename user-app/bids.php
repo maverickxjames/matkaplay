@@ -236,10 +236,10 @@ include('db.php');
             </div>
         </div>
         <div class="offcanvas-body">
-            <a href="profile-setting" class="profile-part d-flex align-items-center gap-2">
+            <a href="profile" class="profile-part d-flex align-items-center gap-2">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
                 <div>
-                    <h3>Jonathan Higgins</h3>
+                    <h3>Ashok Matkaplay</h3>
                     <span>Edit Account</span>
                 </div>
             </a>
@@ -251,7 +251,7 @@ include('db.php');
                     </a>
                 </li>
                 <li>
-                    <a href="my-rides" class="pages">
+                    <a href="history" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
                         <h3>Account Statement</h3>
                     </a>
@@ -277,7 +277,7 @@ include('db.php');
                 </li>
 
                 <li>
-                    <a href="https://themes.pixelstrap.com/pwa/taxify/elements/elements-page" class="pages">
+                    <a href="rates" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
                         <h3> Game Rates</h3>
                     </a>

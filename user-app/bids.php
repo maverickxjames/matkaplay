@@ -133,7 +133,7 @@ include('db.php');
                             </div>
 
                             <div class="grid-btn mt-2">
-                                <a href="home" class="btn <?= $statusClass ?> w-100 m-0"><?= $buttonText ?></a>
+                                <a href="#0" class="btn <?= $statusClass ?> w-100 m-0"><?= $buttonText ?></a>
                             </div>
                         </div>
                     </li>
@@ -270,7 +270,7 @@ include('db.php');
                     </a>
                 </li>
                 <li>
-                    <a href="page-listing" class="pages">
+                    <a href="#0" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
                         <h3>Terms & Condition</h3>
                     </a>

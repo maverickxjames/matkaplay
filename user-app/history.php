@@ -40,6 +40,11 @@
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
+    <style>
+        .box-shadow{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+        }
+    </style>
 </head>
 
 <body>
@@ -84,23 +89,23 @@
             <div class="tab-content ride-content" id="TabContent">
                 <div class="tab-pane fade active show" id="active-tab">
                     <ul class="my-ride-list">
-                        <li>
+                        <li class="mt-2 box-shadow">
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
                                     <a href="#" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
+                                        <img class="img-fluid my-ride-icon" src="https://cdn-icons-png.flaticon.com/512/10432/10432837.png"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <a href="#">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
+                                                <h6 class="title-color fw-medium">Recharge ID : 12000052</h6>
                                             </a>
-                                            <span class="status accent-color fw-normal">Active</span>
+                                            <span class="status secondary-color fw-normal">Unpaid</span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
+                                            <h6 class="success-color" style="font-size: 12px;">₹ 256</h6>
                                             <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
                                         </div>
                                     </div>
@@ -110,16 +115,12 @@
                                     <div class="ride-info">
                                         <div class="ride-info-content">
                                             <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
-                                                <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
-                                                </div>
+                                            <span class="count content-color fw-normal">UPI: </span>
+                                                <h5 class="fw-normal title-color">matkaplayupi@paytm</h5>
                                             </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
+                                            <h6 class="fw-normal content-color mt-2">UTR : 54521452456</h6>
                                         </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
+                                        <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/2267/2267901.png"
                                             alt="p5">
                                     </div>
 
@@ -127,12 +128,114 @@
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
                                                 alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, ottawa, Canada</h5>
+                                            <h5 class="fw-light title-color">Recharge Initiated...</h5>
                                         </li>
 
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
+                                            <h5 class="fw-light title-color border-0">Status Pending...
+                                            </h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mt-2 box-shadow">
+                            <div class="my-ride-box">
+                                <div class="my-ride-head">
+                                    <a href="#" class="my-ride-img">
+                                        <img class="img-fluid my-ride-icon" src="https://cdn-icons-png.flaticon.com/512/10432/10432837.png"
+                                            alt="receipt">
+                                    </a>
+
+                                    <div class="my-ride-content flex-column">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <a href="#">
+                                                <h6 class="title-color fw-medium">Recharge ID : 12000052</h6>
+                                            </a>
+                                            <span class="status success-color fw-normal">Success</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                                            <h6 class="success-color" style="font-size: 12px;">₹ 256</h6>
+                                            <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="my-ride-details">
+                                    <div class="ride-info">
+                                        <div class="ride-info-content">
+                                            <div class="d-flex align-content-center gap-2 lh-base">
+                                            <span class="count content-color fw-normal">UPI: </span>
+                                                <h5 class="fw-normal title-color">matkaplayupi@paytm</h5>
+                                            </div>
+                                            <h6 class="fw-normal content-color mt-2">UTR : 54521452456</h6>
+                                        </div>
+                                        <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/2267/2267901.png"
+                                            alt="p5">
+                                    </div>
+
+                                    <ul class="ride-location-listing mt-3">
+                                        <li class="location-box">
+                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
+                                                alt="location">
+                                            <h5 class="fw-light title-color">Recharge Initiated...</h5>
+                                        </li>
+
+                                        <li class="location-box">
+                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
+                                            <h5 class="fw-light title-color border-0">Status Complete
+                                            </h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="mt-2 box-shadow">
+                            <div class="my-ride-box">
+                                <div class="my-ride-head">
+                                    <a href="#" class="my-ride-img">
+                                        <img class="img-fluid my-ride-icon" src="https://cdn-icons-png.flaticon.com/512/10432/10432837.png"
+                                            alt="receipt">
+                                    </a>
+
+                                    <div class="my-ride-content flex-column">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <a href="#">
+                                                <h6 class="title-color fw-medium">Recharge ID : 12000052</h6>
+                                            </a>
+                                            <span class="status error-color fw-normal">Failed</span>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-between  mt-2">
+                                            <h6 class="success-color" style="font-size: 12px;">₹ 256</h6>
+                                            <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="my-ride-details">
+                                    <div class="ride-info">
+                                        <div class="ride-info-content">
+                                            <div class="d-flex align-content-center gap-2 lh-base">
+                                            <span class="count content-color fw-normal">UPI: </span>
+                                                <h5 class="fw-normal title-color">matkaplayupi@paytm</h5>
+                                            </div>
+                                            <h6 class="fw-normal content-color mt-2">UTR : NULL</h6>
+                                        </div>
+                                        <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/2267/2267901.png"
+                                            alt="p5">
+                                    </div>
+
+                                    <ul class="ride-location-listing mt-3">
+                                        <li class="location-box">
+                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
+                                                alt="location">
+                                            <h5 class="fw-light title-color">Recharge Initiated...</h5>
+                                        </li>
+
+                                        <li class="location-box">
+                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
+                                            <h5 class="fw-light title-color border-0">Status Failed
                                             </h5>
                                         </li>
                                     </ul>
@@ -148,19 +251,19 @@
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
                                     <a href="pending-ride-details" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
+                                        <img class="img-fluid my-ride-icon" src="https://cdn-icons-png.flaticon.com/512/10432/10432837.png"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <a href="pending-ride-details">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
+                                                <h6 class="title-color fw-medium">WITHDRAW ID : 12000052</h6>
                                             </a>
                                             <span class="status secondary-color fw-normal">Pending</span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
+                                            <h6 class="fw-mediun success-color">₹ 256</h6>
                                             <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
                                         </div>
                                     </div>
@@ -170,28 +273,26 @@
                                     <div class="ride-info">
                                         <div class="ride-info-content">
                                             <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
+                                                <h5 class="fw-normal title-color">Mode</h5>
                                                 <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
+                                                    <span class="count content-color fw-normal">UPI</span>
                                                 </div>
                                             </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
+                                            <h6 class="fw-normal content-color mt-1">Withdraw not done</h6>
                                         </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
+                                        <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/2267/2267901.png"
                                             alt="p5">
                                     </div>
                                     <ul class="ride-location-listing mt-3">
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
                                                 alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, Ottawa, Canada</h5>
+                                            <h5 class="fw-light title-color">Withdraw Initiated...</h5>
                                         </li>
 
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
+                                            <h5 class="fw-light title-color border-0">Status : Pending
                                             </h5>
                                         </li>
                                     </ul>
@@ -203,19 +304,19 @@
                             <div class="my-ride-box">
                                 <div class="my-ride-head">
                                     <a href="pending-ride-details" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
+                                        <img class="img-fluid my-ride-icon" src="https://cdn-icons-png.flaticon.com/512/10432/10432837.png"
                                             alt="receipt">
                                     </a>
 
                                     <div class="my-ride-content flex-column">
                                         <div class="d-flex align-items-center justify-content-between">
                                             <a href="pending-ride-details">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
+                                                <h6 class="title-color fw-medium">WITHDRAW ID : 12000052</h6>
                                             </a>
-                                            <span class="status secondary-color fw-normal">Pending</span>
+                                            <span class="status success-color fw-normal">Success</span>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
+                                            <h6 class="fw-mediun success-color">₹ 256</h6>
                                             <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
                                         </div>
                                     </div>
@@ -225,28 +326,26 @@
                                     <div class="ride-info">
                                         <div class="ride-info-content">
                                             <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
+                                                <h5 class="fw-normal title-color">Mode : </h5>
                                                 <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
+                                                    <span class="count content-color fw-normal">UPI</span>
                                                 </div>
                                             </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
+                                            <!-- <h6 class="fw-normal content-color mt-1">Tesla car</h6> -->
                                         </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
+                                        <img class="img-fluid profile-img" src="https://cdn-icons-png.flaticon.com/512/2267/2267901.png"
                                             alt="p5">
                                     </div>
                                     <ul class="ride-location-listing mt-3">
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
                                                 alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, ottawa, Canada</h5>
+                                            <h5 class="fw-light title-color">Withdraw Initiated....</h5>
                                         </li>
 
                                         <li class="location-box">
                                             <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
+                                            <h5 class="fw-light title-color border-0">Withdraw Success
                                             </h5>
                                         </li>
                                     </ul>
@@ -257,181 +356,8 @@
                     </ul>
                 </div>
 
-                <div class="tab-pane fade" id="complete-tab">
-                    <ul class="my-ride-list">
-                        <li>
-                            <div class="my-ride-box">
-                                <div class="my-ride-head">
-                                    <a href="complete-ride-details" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
-                                            alt="receipt">
-                                    </a>
+              
 
-                                    <div class="my-ride-content flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <a href="complete-ride-details">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
-                                            </a>
-                                            <span class="status success-color fw-normal">Complete</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
-                                            <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="my-ride-details">
-                                    <div class="ride-info">
-                                        <div class="ride-info-content">
-                                            <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
-                                                <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
-                                                </div>
-                                            </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
-                                        </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
-                                            alt="p5">
-                                    </div>
-                                    <ul class="ride-location-listing mt-3">
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
-                                                alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, ottawa, Canada</h5>
-                                        </li>
-
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
-                                            </h5>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="my-ride-box">
-                                <div class="my-ride-head">
-                                    <a href="complete-ride-details" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
-                                            alt="receipt">
-                                    </a>
-
-                                    <div class="my-ride-content flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <a href="complete-ride-details">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
-                                            </a>
-                                            <span class="status success-color fw-normal">Complete</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
-                                            <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="my-ride-details">
-                                    <div class="ride-info">
-                                        <div class="ride-info-content">
-                                            <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
-                                                <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
-                                                </div>
-                                            </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
-                                        </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
-                                            alt="p5">
-                                    </div>
-                                    <ul class="ride-location-listing mt-3">
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
-                                                alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, ottawa, Canada</h5>
-                                        </li>
-
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
-                                            </h5>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="tab-pane fade" id="cancel-tab">
-                    <ul class="my-ride-list">
-                        <li>
-                            <div class="my-ride-box">
-                                <div class="my-ride-head">
-                                    <a href="cancel-ride-details" class="my-ride-img">
-                                        <img class="img-fluid my-ride-icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/car-img.svg"
-                                            alt="receipt">
-                                    </a>
-
-                                    <div class="my-ride-content flex-column">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <a href="cancel-ride-details">
-                                                <h6 class="title-color fw-medium">ID : 12000052</h6>
-                                            </a>
-                                            <span class="status error-color fw-normal">Cancel</span>
-                                        </div>
-                                        <div class="d-flex align-items-center justify-content-between  mt-2">
-                                            <h6 class="fw-mediun success-color">$256</h6>
-                                            <h6 class="fw-normal content-color">15 Feb'24 at 10:15 AM</h6>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="my-ride-details">
-                                    <div class="ride-info">
-                                        <div class="ride-info-content">
-                                            <div class="d-flex align-content-center gap-2 lh-base">
-                                                <h5 class="fw-normal title-color">Aathryn Murphy</h5>
-                                                <div class="d-flex align-items-center gap-1">
-                                                    <img class="star" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/star.svg" alt="star">
-                                                    <h5 class="fw-normal title-color">4.8</h5>
-                                                    <span class="count content-color fw-normal">(127)</span>
-                                                </div>
-                                            </div>
-                                            <h6 class="fw-normal content-color mt-1">Tesla car</h6>
-                                        </div>
-                                        <img class="img-fluid profile-img" src="../assets/images/profile/p5.png"
-                                            alt="p5">
-                                    </div>
-                                    <ul class="ride-location-listing mt-3">
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/location-fill.svg"
-                                                alt="location">
-                                            <h5 class="fw-light title-color">17, Yonge St, ottawa, Canada</h5>
-                                        </li>
-
-                                        <li class="location-box">
-                                            <img class="icon" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/gps.svg" alt="gps">
-                                            <h5 class="fw-light title-color border-0">20, Yonge St, Toronto, Canada
-                                            </h5>
-                                        </li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </section>
@@ -540,7 +466,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="page-listing" class="pages">
+                    <a href="#0" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
                         <h3>Template Pages</h3>
                     </a>

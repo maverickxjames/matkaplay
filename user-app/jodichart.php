@@ -1358,7 +1358,7 @@ include('db.php');
                     </a>
                 </li>
                 <li>
-                    <a href="page-listing" class="pages">
+                    <a href="#0" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
                         <h3>Terms & Condition</h3>
                     </a>

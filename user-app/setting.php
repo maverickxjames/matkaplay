@@ -403,7 +403,7 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <div class="pages">
                         <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
                         <h3>Dark</h3>
@@ -411,7 +411,7 @@
                     <div class="switch-btn">
                         <input id="dark-switch" type="checkbox">
                     </div>
-                </li>
+                </li> -->
 
             </ul>
 

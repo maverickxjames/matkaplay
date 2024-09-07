@@ -95,10 +95,10 @@ include('db.php');
         <div class="swiper banner1 home-banner">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider1.png" alt="slider">
+                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider3.jpg" alt="slider">
                 </div>
                 <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider2.png" alt="slider">
+                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider3.jpg" alt="slider">
                 </div>
             </div>
         </div>
@@ -352,7 +352,7 @@ include('db.php');
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <div class="pages">
                         <i class="iconsax sidebar-icon" data-icon="brush-3"> </i>
                         <h3>Dark</h3>
@@ -360,7 +360,7 @@ include('db.php');
                     <div class="switch-btn">
                         <input id="dark-switch" type="checkbox">
                     </div>
-                </li>
+                </li> -->
 
             </ul>
 

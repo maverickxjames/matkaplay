@@ -1,5 +1,8 @@
 <?php
 include('db.php');
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -164,12 +167,12 @@ include('db.php');
                                                 <h5 class="fw-normal title-color">
                                                     <?php
                                                     $arr = json_decode($row['game_data'], true);
-                                                    echo $arr['result'][0] . "-" . $arr['result'][1] . "-" . $arr['result'][2];;
+                                                    echo $arr['result'][0] . "-" . $arr['result'][1] . "-" . $arr['result'][2];
                                                     ?>
                                                 </h5>
                                             </div>
                                         </a>
-                                        <div onclick="window.location.href='jodichart'" class="rating">
+                                        <div onclick="window.location.href='select?id=<?=$row['id'] ?>'" class="rating">
                                             <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
                                             <!-- <h6>4.5</h6> -->
                                         </div>
@@ -203,7 +206,7 @@ include('db.php');
                                                 </h5>
                                             </div>
                                         </a>
-                                        <div onclick="window.location.href='jodichart'" class="rating">
+                                        <div onclick="window.location.href='select?id=<?=$row['id'] ?>'" class="rating">
                                             <img style="width: 26px;height:26px" class="img-fluid star" src="https://cdn-icons-png.flaticon.com/512/5690/5690573.png" alt="star">
                                             <!-- <h6>4.5</h6> -->
                                         </div>

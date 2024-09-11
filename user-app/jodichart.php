@@ -135,6 +135,7 @@ include('db.php');
 </head>
 
 <body>
+    <div id="top"></div>
     <!-- header starts -->
     <header id="header" class="main-header inner-page-header">
         <div class="custom-container">
@@ -153,7 +154,7 @@ include('db.php');
     <!-- header end -->
 
     <!-- note section starts -->
-    <section class="pt-3">
+    <section  class="pt-3">
         <div class="custom-container">
             <div class="poster-part">
                 <p class="fw-normal text-white">Success is not just about winning, it's about learning from every result—whether you win or lose, the game continues.</p>
@@ -163,9 +164,9 @@ include('db.php');
     <!-- note section end -->
 
     <!-- finding driver list starts -->
-    <section class="driver-request section-b-space">
+    <section  class="driver-request section-b-space">
         <div class="custom-container">
-            <div id="top" class="grid-btn mt-2">
+            <div class="grid-btn mt-2">
                 <a href="#bottom" class="btn btn-primary w-100 m-0">Go to Bottom</a>
             </div>
             <ul class="driver-list">

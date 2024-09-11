@@ -74,7 +74,7 @@
                         </div>
                         <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹100000</h4>
                         <div class="grid-btn mt-2">
-                            <a href="#" data-bs-toggle="offcanvas" class="btn gray-btn w-100 m-0">Recharge</a>
+                            <a href="recharge" class="btn gray-btn w-100 m-0">Recharge</a>
                             <a href="home" class="btn theme-btn w-100 m-0">Withdraw</a>
                         </div>
                     </div>

@@ -211,7 +211,7 @@ include('db.php');
                                             <!-- <h6>4.5</h6> -->
                                         </div>
                                     </div>
-                                    <p style="color:red">Betting is Clodes for Today</p>
+                                    <p style="color:red">Betting is closed for Today</p>
 
 
                                     <ul class="content-list">

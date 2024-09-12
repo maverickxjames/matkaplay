@@ -257,7 +257,7 @@ include 'db.php';
                     </div>
                     <br>
 
-                    <a href="home" class="btn theme-btn w-100 auth-btn">UPLOAD</a>
+                    <a href="history" class="btn theme-btn w-100 auth-btn">UPLOAD</a>
                 </form>
             </div>
         </div>

@@ -172,6 +172,24 @@ include 'db.php';
         .driver-request .driver-list li {
             padding-top: 0;
         }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons .single-button {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .buttons .single-button button {
+            width: 100%;
+            margin: 5px;
+        }
     </style>
 
 </head>
@@ -201,52 +219,71 @@ include 'db.php';
             <ul class="driver-list">
                 <li>
                     <form action="" class="auth-form">
-                    <div class="form-group mt-0">
-                        <label class="form-label mb-2" for="upiId">Amount :</label>
-                        <input type="number" class="form-control" id="amount" placeholder="Enter Amount">
-                    </div>
+                        <div class="form-group mt-0">
+                            <label class="form-label mb-2" for="upiId">Amount :</label>
+                            <input type="number" class="form-control" id="amount" placeholder="Enter Amount">
+                        </div>
                     </form>
-                
+                    <div class="buttons">
+                        <div class="single-button">
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(500)">500</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(1000)">1000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(2500)">2500</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(5000)">5000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(10000)">10000</button>
+                        </div>
+                        <div class="single-button">
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(20000)">20000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(25000)">25000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(30000)">30000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(50000)">50000</button>
+                            <button type="button" class="p-2 btn gray-btn" onclick="setAmount(100000)">100000</button>
+                        </div>
+                    </div>
+
+
                 </li>
+
             </ul>
-            <br>    
+
+            <br>
             <h3 class="fw-semibold title-color text-center">Choose Method</h3>
             <br>
             <ul class="payment-method-list pt-0">
-                    <li class="w-100">
-                        <div class="payment-list-box">
-                            <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
-                                    src="https://cdn.uxhack.co/product_logos/bhim_logo_2.png" alt="mastercard"> UPI Auto</label>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
-                        </div>
-                    </li>
-                    <li class="w-100">
-                        <div class="payment-list-box">
-                            <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
-                                    src="https://cdn-icons-png.flaticon.com/512/8984/8984290.png" alt="mastercard"> UPI Manual</label>
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
-                        </div>
-                    </li>
-                </ul>
-            
-                    
-            <div class="grid-btn mt-4">
-                <button class="btn btn-primary w-100 m-0">Proceed to Pay</button>
-            </div>
-            <div class="condition-part">
-            <h4 class="fw-semibold title-color">Notice :</h4>
-            <ul class="condition-list">
-                <li>
-                    <h5>Minimum Recharge</h5>
-                    <p>Minimum Recharge is 1000 INR</p>
+                <li class="w-100">
+                    <div class="payment-list-box">
+                        <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
+                                src="https://cdn.uxhack.co/product_logos/bhim_logo_2.png" alt="mastercard"> UPI Auto</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                    </div>
                 </li>
-                <li>
-                    <h5>Fill UTR </h5>
-                    <p>Enter your UTR no. After payment</p>
+                <li class="w-100">
+                    <div class="payment-list-box">
+                        <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
+                                src="https://cdn-icons-png.flaticon.com/512/8984/8984290.png" alt="mastercard"> UPI Manual</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                    </div>
                 </li>
             </ul>
-        </div>
-            
+
+
+            <div class="grid-btn mt-4">
+                <button onclick="window.location.href='recharge.php'" class="btn btn-primary w-100 m-0">Proceed to Pay</button>
+            </div>
+            <div class="condition-part">
+                <h4 class="fw-semibold title-color">Notice :</h4>
+                <ul class="condition-list">
+                    <li>
+                        <h5>Minimum Recharge</h5>
+                        <p>Minimum Recharge is 1000 INR</p>
+                    </li>
+                    <li>
+                        <h5>Fill UTR </h5>
+                        <p>Enter your UTR no. After payment</p>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
@@ -268,8 +305,13 @@ include 'db.php';
 
     <!-- script js -->
     <script src="../assets/js/script.js"></script>
-   
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+         function setAmount(value) {
+        document.getElementById("amount").value = value;
+    }
+    </script>
 </body>
 
 

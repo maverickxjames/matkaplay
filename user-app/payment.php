@@ -198,68 +198,55 @@ include 'db.php';
     <!-- finding driver list starts -->
     <section class="driver-request section-b-space">
         <div class="custom-container">
-
-            <div class="condition-part">
-                <h4 class="fw-semibold title-color">Step 1 :</h4>
-                <ul class="condition-list">
-                    <li>
-                        <h5>Scan QR</h5>
-                        <p>Scan qr code or copy upi id on clicking on below button</p>
-                    </li>
-                    <li>
-                        <h5>Pay Amount</h5>
-                        <p>Pay the requested amount</p>
-                    </li>
-                </ul>
-            </div>
-
             <ul class="driver-list">
                 <li>
-                    <div class="game-container">
-                        <div class="card">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=fsdgfjhdfghjfbksjdhfksdjhkdsfgfdjhukrhgfkjdshfksdhfkusdhfkjdshfksdjhfkuerfhyerkfjskdf" alt="">
-                        </div>
+                    <form action="" class="auth-form">
+                    <div class="form-group mt-0">
+                        <label class="form-label mb-2" for="upiId">Amount :</label>
+                        <input type="number" class="form-control" id="amount" placeholder="Enter Amount">
                     </div>
+                    </form>
+                
                 </li>
             </ul>
+            <br>    
+            <h3 class="fw-semibold title-color text-center">Choose Method</h3>
             <br>
-            <div class="form-group mt-0">
-                        <label class="form-label mb-2" for="upiId">UPI ID :</label>
-                        <input type="text" class="form-control" id="upiId" value="payment@upi" disabled>
-                    </div>
+            <ul class="payment-method-list pt-0">
+                    <li class="w-100">
+                        <div class="payment-list-box">
+                            <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
+                                    src="https://cdn.uxhack.co/product_logos/bhim_logo_2.png" alt="mastercard"> UPI Auto</label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                        </div>
+                    </li>
+                    <li class="w-100">
+                        <div class="payment-list-box">
+                            <label class="form-check-label" for="flexRadioDefault"> <img class="img-fluid img"
+                                    src="https://cdn-icons-png.flaticon.com/512/8984/8984290.png" alt="mastercard"> UPI Manual</label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault">
+                        </div>
+                    </li>
+                </ul>
+            
                     
             <div class="grid-btn mt-4">
-                <button onclick="copyUPI()" class="btn btn-primary w-100 m-0">Copy UPI ID</button>
+                <button class="btn btn-primary w-100 m-0">Proceed to Pay</button>
             </div>
             <div class="condition-part">
-            <h4 class="fw-semibold title-color">Step 2 :</h4>
+            <h4 class="fw-semibold title-color">Notice :</h4>
             <ul class="condition-list">
                 <li>
-                    <h5>Upload Payment Proof</h5>
-                    <p>Upload your payment Screenshot</p>
+                    <h5>Minimum Recharge</h5>
+                    <p>Minimum Recharge is 1000 INR</p>
                 </li>
                 <li>
                     <h5>Fill UTR </h5>
-                    <p>Enter your UTR no.</p>
+                    <p>Enter your UTR no. After payment</p>
                 </li>
             </ul>
         </div>
-            <div>
-                <form class="auth-form">
-                    <div class="form-group mt-0">
-                        <label class="form-label mb-2" for="Inputname">Upload Screenshot :</label>
-                        <input type="file" class="form-control" id="Inputname">
-                    </div>
-                    <br>
-                    <div class="form-group mt-0">
-                        <label class="form-label mb-2" for="utr">Enter UTR :</label>
-                        <input type="number" class="form-control" id="utr" placeholder="Enter Bank Reference Number">
-                    </div>
-                    <br>
-
-                    <a href="home" class="btn theme-btn w-100 auth-btn">UPLOAD</a>
-                </form>
-            </div>
+            
         </div>
     </section>
 
@@ -281,29 +268,7 @@ include 'db.php';
 
     <!-- script js -->
     <script src="../assets/js/script.js"></script>
-    <script>
-    function copyUPI() {
-        // Get the UPI ID value from the disabled input field
-        var upiId = document.getElementById("upiId").value;
-        
-        // Create a temporary input element to copy the text
-        var tempInput = document.createElement("input");
-        tempInput.value = upiId;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-        
-        // Show SweetAlert success message
-        Swal.fire({
-            icon: 'success',
-            title: 'UPI ID Copied',
-            text: 'UPI ID has been copied successfully!',
-            showConfirmButton: false,
-            timer: 1500
-        });
-    }
-</script>
+   
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

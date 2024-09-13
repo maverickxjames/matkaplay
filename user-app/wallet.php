@@ -1,3 +1,13 @@
+<?php 
+include './db.php';
+$mobile = $_SESSION['mobile'];
+$query = "SELECT * FROM users WHERE mobile = '$mobile'";
+$run = mysqli_query($con,$query);
+$data = mysqli_fetch_assoc($run);
+$wallet = $data['wallet'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +82,7 @@
                             </div>
                             
                         </div>
-                        <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹100000</h4>
+                        <h4 class="wallet-amount fw-semibold success-color navbar-expand">₹ <?=$wallet?></h4>
                         <div class="grid-btn mt-2">
                             <a href="payment" class="btn gray-btn w-100 m-0">Recharge</a>
                             <a href="home" class="btn theme-btn w-100 m-0">Withdraw</a>

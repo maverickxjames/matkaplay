@@ -1,6 +1,8 @@
 <?php
 include('db.php');
-
+if(!isset($_SESSION['isLogin'])){
+    header('location:login');
+}
 
 
 ?>
@@ -49,6 +51,13 @@ include('db.php');
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
+    <style>
+        .flag{
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,6 +85,36 @@ include('db.php');
         </div>
     </header>
     <!-- header end -->
+
+        <!-- Change language offcanvas starts -->
+        <div class="offcanvas ride-offcanvas p-0" tabindex="-1" id="language">
+        <div class="offcanvas-header pb-0">
+            <h3>Choose Chart</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="option-listing">
+                <li class="w-100">
+                    <div class="form-check mt-0 pb-3">
+                        <label class="form-check-label" for="jodichart"><img class="flag"
+                                src="https://cdn-icons-png.flaticon.com/512/12907/12907880.png" alt="">Jodi Chart</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="jodichart" checked>
+                    </div>
+                </li>
+                <li class="w-100">
+                    <div class="form-check mt-3 pb-3">
+                        <label class="form-check-label" for="panachart"><img class="flag"
+                                src="https://cdn-icons-png.flaticon.com/512/8176/8176145.png" alt="">Pana Chart</label>
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="panachart">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer border-0">
+            <button onclick="viewChart()" class="btn theme-btn w-100 mt-0">View Chart</button>
+        </div>
+    </div>
+    <!-- Change language offcanvas end -->
 
     <!-- search section starts -->
     <!-- <section class="search-section section-b-space pt-0">
@@ -160,7 +199,7 @@ include('db.php');
                             ?>
                                 <div class="coupon-details">
                                     <div class="coupon-content">
-                                        <a href="jodichart" class="coupon-name">
+                                        <a href="#language" data-bs-toggle="offcanvas" class="coupon-name">
                                             <img class="img-fluid coupon-img" style="border-radius:0" src="https://cdn-icons-png.flaticon.com/512/1234/1234189.png" alt="c1">
 
                                             <div>
@@ -395,6 +434,16 @@ include('db.php');
 
     <!-- script js -->
     <script src="../assets/js/script.js"></script>
+
+    <script>
+        function viewChart() {
+            var ele = document.getElementsByName('flexRadioDefault');
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    window.location.href = ele[i].id;
+            }
+        }
+    </script>
 </body>
 
 

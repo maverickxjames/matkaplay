@@ -1,3 +1,15 @@
+<?php 
+include './db.php';
+$mobile = $_SESSION['mobile'];
+$query = "SELECT * FROM users WHERE mobile = '$mobile'";
+$run = mysqli_query($con,$query);
+$data = mysqli_fetch_assoc($run);
+
+$name = $data['username'];
+$email = $data['email'];
+$wallet = $data['wallet'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,14 +75,32 @@
             <div class="profile-image">
                 <img class="img-fluid profile-pic" src="../assets/images/profile/p8.png" alt="p8">
             </div>
-            <h3 class="profile-name">Ashok Matkaplay</h3>
-            <h6 class="fw-normal content-color mt-1 text-center">jonathanhiggins001@gmail.com</h6>
+            <h3 class="profile-name">
+                <?php 
+                if($name == ''){
+                    echo "No Name";
+                }else{
+                    echo $name;
+                }
+
+                ?>
+            </h3>
+            <h6 class="fw-normal content-color mt-1 text-center">
+            <?php 
+                if($email == ''){
+                    echo "add email";
+                }else{
+                    echo $email;
+                }
+                ?>
+
+            </h6>
         </div>
 
         <div onclick="window.location.href='wallet'" class="wallet-part">
             <h6>My Wallet Balance</h6>
             <div class="d-flex align-content-center justify-content-center gap-1">
-                <h5>₹100000.00 </h5>
+                <h5>₹ <?=$wallet?> </h5>
                 <img class="img-fluid arrow-img" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/side-arrow.svg" alt="side-arrow">
             </div>
         </div>

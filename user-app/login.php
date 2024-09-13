@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,14 +35,93 @@
     <!-- iconsax css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/vendors/iconsax.css">
 
+    <!-- sweet alert  -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/sweetalert/dist/sweetalert.css">
+
     <!-- bootstrap css -->
     <link rel="stylesheet" id="rtl-link" type="text/css" href="../assets/css/vendors/bootstrap.css">
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
+    
+            <!-- sweetalert  -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+<?php 
+include './db.php';
+
+
+if(isset($_POST['submit'])){
+    $mobile = $_POST['mobile'];
+    $otp = 99999;
+   
+    // $otp = rand(1000,9999);
+
+   $query = "SELECT * FROM users WHERE mobile = '$mobile'";
+    $result = mysqli_query($con,$query);
+    if(mysqli_num_rows($result) > 0){
+        $query = "UPDATE users SET otp = '$otp' WHERE mobile = '$mobile'";
+        $result = mysqli_query($con,$query);
+    }else{
+        $query = "INSERT INTO users (mobile,otp) VALUES ('$mobile','$otp')";
+        $result = mysqli_query($con,$query);
+    }
+    $mobileNew = "91".$mobile;
+
+
+    $message = "Your OTP is ".$otp;
+    $response = array();
+    $response['return'] = true;
+    if($response['return']){
+        $_SESSION['otp'] = $otp;
+        $_SESSION['mobile'] = $mobile;
+        ?>
+        <script>
+            swal({
+                title: "Success",
+                text: "OTP sent successfully",
+                icon: "success",
+                button: "Ok",
+            }).then(function() {
+                window.location = "otp.php";
+            });
+        </script>
+        <?php 
+     
+    }else{
+        $errormsg = "OTP not sent";
+    }
+}
+
+?>
+    <?php 
+    if(isset($errormsg)){
+        ?>
+
+        <script>
+            swal({
+                title: "Error",
+                text: "<?php echo $errormsg; ?>",
+                icon: "error",
+                button: "Ok",
+            });
+        </script>
+        <?php 
+    }else{
+        ?>
+        <script>
+            swal({
+                title: "Error",
+                text: "<?php echo $errormsg; ?>",
+                icon: "error",
+                button: "Ok",
+            });
+        </script>
+        <?php
+    }
+    ?>
     <!-- header starts -->
     <header id="header" class="main-header pt-5 pb-3">
         <div class="custom-container">
@@ -61,7 +142,7 @@
                 <h6>Hey, You have been missed !</h6>
             </div>
 
-            <form class="auth-form">
+            <form class="auth-form" method="post">
                 <div class="form-group mt-0">
                     <label class="form-label" for="validationDefault01">Mobile Number</label>
                     <div class="d-flex gap-2">
@@ -76,27 +157,20 @@
                         <div class="form-input w-100">
                        
 
-                            <input oninput="this.value = this.value.replace(/[^0-9]/g, '');" type="text" maxlength="10" class="form-control" id="validationDefault01"
+                            <input name="mobile" oninput="this.value = this.value.replace(/[^0-9]/g, '');" type="text" maxlength="10" class="form-control" id="validationDefault01"
                                 placeholder="Enter your number" required>
                         </div>
                     </div>
                 </div>
 
-                <a href="otp" class="btn theme-btn w-100 auth-btn" role="button">Get OTP</a>
-                <h6 class="content-color fw-normal mt-3 text-center"> New User ?
-                    <a href="signup" class="title-color fw-medium">Sign up</a> </h6>
-                <div class="division">
-                    <span>OR</span>
-                </div>
-
-                <a href="https://www.google.co.in/"
-                    class="btn theme-btn google-btn w-100 d-flex align-items-center justify-content-center gap-2"> <img
-                        class="img-fluid google" src="https://themes.pixelstrap.com/pwa/taxify/assets/images/svg/google.svg" alt="google" /> Continue with
-                    Google</a>
+                <input type="submit" name="submit" value="Get OTP" class="btn theme-btn w-100 auth-btn">
+           
+    
             </form>
         </div>
     </div>
     <!-- login page end -->
+
 
     <!-- iconsax js -->
     <script src="../assets/js/iconsax.js"></script>

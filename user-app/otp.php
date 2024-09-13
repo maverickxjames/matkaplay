@@ -39,9 +39,66 @@
 
     <!-- Theme css -->
     <link rel="stylesheet" id="change-link" type="text/css" href="../assets/css/style.css">
+
+    <!-- sweet alert  -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/sweetalert/dist/sweetalert.css">
+
+    <!-- sweetalert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
+
+<?php 
+include './db.php';
+$mobile = $_SESSION['mobile'];
+if(isset($_POST['submit'])){
+    
+$otp = $_SESSION['otp'];
+
+$otp1 = $_POST['otp1'];
+$otp2 = $_POST['otp2'];
+$otp3 = $_POST['otp3'];
+$otp4 = $_POST['otp4'];
+$otp5 = $_POST['otp5'];
+
+$otpR = $otp1.$otp2.$otp3.$otp4.$otp5;
+
+
+
+$query = "SELECT * FROM users WHERE mobile = '$mobile' AND otp = '$otpR'";
+$run = mysqli_query($con,$query);
+if(mysqli_num_rows($run) > 0){
+    $data = mysqli_fetch_assoc($run);
+    $_SESSION['id'] = $data['id'];
+    $_SESSION['email'] = $data['email'];
+    $_SESSION['mobile'] = $data['mobile'];
+    $_SESSION['otp'] = $data['otp'];
+    $_SESSION['status'] = $data['status'];
+    $_SESSION['isLogin'] = true;
+    ?>
+    <script>
+        swal("Verified", {
+            icon: "success",
+        }).then((value) => {
+            window.location = 'home.php';
+        });
+    </script>
+    <?php 
+}else{
+    ?>
+    <script>
+        swal("OTP not matched", {
+            icon: "error",
+        }).then((value) => {
+            window.location = 'otp.php';
+        });
+    </script>
+    <?php 
+}
+}
+
+?>
     <!-- header starts -->
     <header id="header" class="main-header">
         <div class="custom-container">
@@ -62,33 +119,36 @@
             <div class="auth-title pt-3">
                 <div class="loader-line"></div>
                 <h2>OTP verification</h2>
-                <h6>Enter OTP sent to +1-212-8684536</h6>
+                <h6>Enter OTP sent to +91 <?=$mobile?></h6>
             </div>
 
             <h4 class="title-color fw-medium otp-name">OTP</h4>
-            <form class="otp-form">
+            <form  method="post">
+                <div class="otp-form">
                 <div class="form-input dark-border-gradient">
-                    <input type="number" class="form-control active" placeholder="0" id="five1"
+                    <input type="number" name="otp1" class="form-control active" placeholder="0" id="five1"
                         onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)">
                 </div>
                 <div class="form-input dark-border-gradient">
-                    <input type="number" class="form-control" placeholder="0" id="five2"
+                    <input type="number" name="otp2" class="form-control" placeholder="0" id="five2"
                         onkeyup="onKeyUpEvent(2, event)" onfocus="onFocusEvent(2)">
                 </div>
                 <div class="form-input dark-border-gradient">
-                    <input type="number" class="form-control" placeholder="0" id="five3"
+                    <input type="number" name="otp3" class="form-control" placeholder="0" id="five3"
                         onkeyup="onKeyUpEvent(3, event)" onfocus="onFocusEvent(3)">
                 </div>
                 <div class="form-input dark-border-gradient">
-                    <input type="number" class="form-control" placeholder="0" id="five4"
+                    <input type="number" name="otp4" class="form-control" placeholder="0" id="five4"
                         onkeyup="onKeyUpEvent(4, event)" onfocus="onFocusEvent(4)">
                 </div>
                 <div class="form-input dark-border-gradient">
-                    <input type="number" class="form-control" placeholder="0" id="five5"
+                    <input type="number" name="otp5" class="form-control" placeholder="0" id="five5"
                         onkeyup="onKeyUpEvent(5, event)" onfocus="onFocusEvent(5)">
                 </div>
+                </div>
+                <input type="submit" name="submit" value="Verify" class="btn theme-btn w-100 auth-btn">
             </form>
-            <a href="home" class="btn theme-btn w-100 auth-btn" role="button">Verify</a>
+            
             <h6 class="title-color fw-semibold mt-3 text-center"> <span class="content-color fw-medium">Not Received Yet
                     ? </span> <a href="otp" class="title-color fw-semibold">Resend it</a> </h6>
         </div>

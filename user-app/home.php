@@ -137,10 +137,10 @@ if(!isset($_SESSION['isLogin'])){
         <div class="swiper banner1 home-banner">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider3.jpg" alt="slider">
+                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider4.png" alt="slider">
                 </div>
                 <div class="swiper-slide">
-                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider3.jpg" alt="slider">
+                    <img class="img-fluid slider-img w-100" src="../assets/images/slider/slider4.png" alt="slider">
                 </div>
             </div>
         </div>

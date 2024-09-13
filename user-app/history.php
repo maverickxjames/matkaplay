@@ -570,7 +570,7 @@ $userid = $_SESSION['id'];
                 <li>
                     <a href="history" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="car"> </i>
-                        <h3>My Ride</h3>
+                        <h3>Account Statement</h3>
                     </a>
                 </li>
                 <li>
@@ -589,26 +589,15 @@ $userid = $_SESSION['id'];
                 <li>
                     <a href="#0" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="book-closed"> </i>
-                        <h3>Template Pages</h3>
+                        <h3>Terms & Condition</h3>
                     </a>
                 </li>
 
                 <li>
-                    <a href="" class="pages">
+                    <a href="rates" class="pages">
                         <i class="iconsax sidebar-icon" data-icon="document-text-1"> </i>
-                        <h3> Template Elements</h3>
+                        <h3> Game Rates</h3>
                     </a>
-                </li>
-
-
-                <li>
-                    <div class="pages">
-                        <i class="iconsax sidebar-icon" data-icon="repeat"> </i>
-                        <h3>RTL</h3>
-                    </div>
-                    <div class="switch-btn">
-                        <input id="dir-switch" type="checkbox">
-                    </div>
                 </li>
 
                 <!-- <li>

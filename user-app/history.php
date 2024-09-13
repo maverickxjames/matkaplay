@@ -95,7 +95,7 @@ $userid = $_SESSION['id'];
             <div class="tab-content ride-content" id="TabContent">
 
                 <?php
-                $query = "SELECT * FROM paymentHistory WHERE userid = '$userid' AND type = 'deposit' ORDER BY id DESC";
+                $query = "SELECT * FROM paymenthistory WHERE userid = '$userid' AND type = 'deposit' ORDER BY id DESC";
                 $run = mysqli_query($con, $query);
 
                 if (mysqli_num_rows($run) > 0) {
@@ -283,7 +283,7 @@ $userid = $_SESSION['id'];
 
 
 <?php
-                $query2 = "SELECT * FROM paymentHistory WHERE userid = '$userid' AND type = 'withdraw' ORDER BY id DESC";
+                $query2 = "SELECT * FROM paymenthistory WHERE userid = '$userid' AND type = 'withdraw' ORDER BY id DESC";
                 $run2 = mysqli_query($con, $query2);
 
                 if (mysqli_num_rows($run2) > 0) {

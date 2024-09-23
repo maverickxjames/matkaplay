@@ -51,13 +51,14 @@
 <body>
 <?php 
 include './db.php';
+include './functions.php';
 
 
 if(isset($_POST['submit'])){
     $mobile = $_POST['mobile'];
-    $otp = 99999;
+    // $otp = 99999;
    
-    // $otp = rand(1000,9999);
+    $otp = rand(10000,99999);
 
    $query = "SELECT * FROM users WHERE mobile = '$mobile'";
     $result = mysqli_query($con,$query);
@@ -70,11 +71,21 @@ if(isset($_POST['submit'])){
     }
     $mobileNew = "91".$mobile;
 
+    $otpStatus = sendOTP($mobile, $otp);
 
-    $message = "Your OTP is ".$otp;
-    $response = array();
-    $response['return'] = true;
-    if($response['return']){
+    // Check if 'status' exists in the response
+    if (isset($otpStatus['status']) && $otpStatus['status'] == false) {
+        ?>
+        <script>
+            swal({
+                title: "Error",
+                text: "Try again later",
+                icon: "error",
+                button: "Ok",
+            });
+        </script>
+        <?php 
+    } elseif (isset($otpStatus['status']) && $otpStatus['status'] == true && isset($otpStatus['response']['return']) && $otpStatus['response']['return'] == true) {
         $_SESSION['otp'] = $otp;
         $_SESSION['mobile'] = $mobile;
         ?>
@@ -89,10 +100,11 @@ if(isset($_POST['submit'])){
             });
         </script>
         <?php 
-     
-    }else{
+    } else {
         $errormsg = "OTP not sent";
     }
+
+    
 }
 
 ?>
